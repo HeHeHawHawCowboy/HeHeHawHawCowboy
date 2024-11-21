@@ -1,0 +1,25 @@
+# Prompt the user to enter their salary and number of dependents
+salary = float(input("Enter your salary: "))
+numDependents = int(input("Enter the number of dependents: "))
+
+# Calculate state withholding tax (6.5% of salary)
+stateTax = salary * 0.065
+
+# Calculate federal withholding tax (28% of salary)
+federalTax = salary * 0.28
+
+# Calculate dependent tax deductions (2.5% of salary per dependent)
+dependentDeduction = salary * 0.025 * numDependents
+
+# Calculate total withholding (state tax + federal tax + dependent deductions)
+totalWithholding = stateTax + federalTax + dependentDeduction
+
+# Calculate take-home pay (salary - total withholding)
+takeHomePay = salary - totalWithholding
+
+# Output the results
+print("State Tax: $", stateTax)
+print("Federal Tax: $", federalTax)
+print("Dependents: $", dependentDeduction)
+print("Salary: $", salary)
+print("Take-Home Pay: $", takeHomePay)
