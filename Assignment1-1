@@ -1,19 +1,30 @@
-entrypoint = "main.py"
-modules = ["python-3.10:v18-20230807-322e88b"]
+# main.py
 
+# First output: Learning how to program in Python
+print("I'm learning how to program in Python.")
+
+# Second output: Showing excitement
+print("That's awesome!")
+# .replit
+
+entrypoint = "main.py"  # Points to the main Python file
+# replit.nix
+
+# Define the Python version and modules
+modules = ["python-3.10:v18-20230807-322e88b"]
+nix = ["apple", "banana", "cherry"]
 [nix]
 channel = "stable-23_05"
 
-[env]
+env = ["apple", "banana", "cherry"]
 VIRTUAL_ENV = "$REPL_HOME/.pythonlibs"
 
-[unitTest]
+unitTest = ["test1", "test2", "test3"]
 language = "python3"
 
-[gitHubImport]
+gitHubImport = ["file1.py", "file2.py", "file3.py"]
 requiredFiles = [".replit", "replit.nix"]
 
-[deployment]
+deployment = ["server1", "server2", "server3"]
 run = ["python3", "main.py"]
 deploymentTarget = "cloudrun"
-git commit -m "Add replit.nix file"
