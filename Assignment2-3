@@ -1,0 +1,23 @@
+# Furniture.py
+
+# Assign the given values for the furniture item
+itemName = "TV Stand"
+retailPrice = 325.0
+wholesalePrice = 200.0
+
+# Calculate the profit
+profit = retailPrice - wholesalePrice
+
+# Calculate the sale price (25% deduction from retail price)
+salePrice = retailPrice * 0.75
+
+# Calculate the profit when the sale price is used
+saleProfit = salePrice - wholesalePrice
+
+# Output the results
+print("Item Name:", itemName)
+print("Retail Price: $", retailPrice)
+print("Wholesale Price: $", wholesalePrice)
+print("Profit: $", profit)
+print("Sale Price: $", salePrice)
+print("Sale Profit: $", saleProfit)
