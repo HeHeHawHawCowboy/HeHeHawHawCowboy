@@ -1,0 +1,22 @@
+# Initialize variables
+charge = 35.00  # Base charge for all signs
+
+# Get inputs from the user
+numChars = int(input("Enter the number of characters on the sign: "))
+woodType = input("Enter the type of wood (oak/pine): ").lower()
+color = input("Enter the color of the lettering (black/white/gold): ").lower()
+
+# Additional cost for characters beyond 5
+if numChars > 5:
+    charge += (numChars - 5) * 4.00
+
+# Additional charge for oak wood
+if woodType == "oak":
+    charge += 20.00
+
+# Additional charge for gold-leaf lettering
+if color == "gold":
+    charge += 15.00
+
+# Output the charge for the sign
+print(f"The charge for this sign is ${charge:.2f}")
